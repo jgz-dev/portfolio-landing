@@ -2,7 +2,7 @@ import { IoArrowForward } from 'react-icons/io5'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
+  <section className="hero-compact min-h-screen md:min-h-screen lg:min-h-screen relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Grid pattern background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       
@@ -13,13 +13,13 @@ export default function Hero() {
       
       <div className="relative z-10 min-h-screen flex items-center justify-center px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
+          <div className="mb-6 sm:mb-8">
             <span className="inline-block px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-violet-600 dark:text-violet-300 text-sm font-medium backdrop-blur-sm">
               Disponible para proyectos
             </span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-black mb-6 leading-none">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-black mb-4 sm:mb-6 leading-none">
             <span className="bg-gradient-to-r from-gray-900 via-violet-600 to-gray-900 dark:from-white dark:via-violet-200 dark:to-white bg-clip-text text-transparent">
               JULIAN GONZALEZ
             </span>
@@ -29,14 +29,14 @@ export default function Hero() {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed">
             Desarrollador Fullstack especializado en Python (FastAPI) y React. Convierto ideas en aplicaciones web modernas y eficientes.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
             <a 
               href="#contact"
-              className="group relative px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl font-bold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/25"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl font-bold text-white overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/25 w-full sm:w-auto"
             >
               <span className="relative z-10">Trabajemos juntos</span>
               <div className="absolute inset-0 bg-gradient-to-r from-violet-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -44,7 +44,7 @@ export default function Hero() {
             
             <a 
               href="#projects"
-              className="group px-8 py-4 border-2 border-violet-500/50 dark:border-violet-500/50 rounded-2xl font-bold text-gray-900 dark:text-violet-300 hover:border-violet-400 hover:bg-violet-500/10 transition-all duration-300 backdrop-blur-sm"
+              className="group px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base border-2 border-violet-500/50 dark:border-violet-500/50 rounded-2xl font-bold text-gray-900 dark:text-violet-300 hover:border-violet-400 hover:bg-violet-500/10 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
             >
               Ver mis proyectos
               <IoArrowForward className="inline-block ml-2 group-hover:translate-x-1 transition-transform" />

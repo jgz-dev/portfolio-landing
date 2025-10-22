@@ -35,15 +35,15 @@ export default function Navbar() {
           : 'bg-white/80 backdrop-blur-md border-b border-violet-500/20'
         : isDark
           ? 'bg-transparent'
-          : 'bg-white/50 backdrop-blur-md'
+          : 'bg-transparent'
       }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4">
+  <div className="max-w-7xl mx-auto px-6 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <a href="#top" onClick={handleLogoClick} className="group cursor-pointer">
             <img 
               src={logo} 
               alt="Logo" 
-              className={`h-20 w-auto hover:scale-110 transition-transform ${
+              className={`h-12 md:h-20 w-auto hover:scale-110 transition-transform ${
                 isDark ? 'brightness-100' : 'brightness-0'
               }`}
             />

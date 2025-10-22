@@ -42,18 +42,19 @@ export default function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-32 bg-gray-50 dark:bg-black relative overflow-hidden transition-colors duration-300">
+    <section className="py-20 sm:py-32 bg-gray-50 dark:bg-black relative overflow-hidden transition-colors duration-300">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 sm:mb-20">
+          <h2 id="projects" className="sr-only">Proyectos</h2>
           <span className="inline-block px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-violet-600 dark:text-violet-300 text-sm font-medium backdrop-blur-sm">
             Portfolio
           </span>
-          <h2 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6">
             Proyectos que
             <span className="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent"> he construido</span>
           </h2>
