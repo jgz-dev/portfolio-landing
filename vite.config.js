@@ -5,4 +5,18 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/portfolio-landing/',
+  build: {
+    // Optimizaciones para producción
+    target: 'es2020',
+    rollupOptions: {
+      output: {
+        // Code splitting para mejorar caching
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'ga': ['react-ga4'],
+          'formspree': ['@formspree/react'],
+        },
+      },
+    },
+  },
 })
