@@ -44,7 +44,7 @@ export default function Skills() {
   ]
 
   return (
-  <section className="py-20 sm:py-32 bg-gray-50 dark:bg-black relative overflow-hidden transition-colors duration-300">
+  <section id="skills" className="py-20 sm:py-32 bg-gray-50 dark:bg-black relative overflow-hidden transition-colors duration-300">
       {/* Background effects */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.02)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-full blur-3xl"></div>

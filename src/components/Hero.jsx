@@ -2,7 +2,7 @@ import { IoArrowForward } from 'react-icons/io5'
 
 export default function Hero() {
   return (
-  <section className="hero-compact min-h-screen md:min-h-screen lg:min-h-screen relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
+  <section id="top" className="hero-compact min-h-screen md:min-h-screen lg:min-h-screen relative overflow-hidden bg-white dark:bg-black transition-colors duration-300">
       {/* Grid pattern background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       

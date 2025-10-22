@@ -6,19 +6,9 @@
 
 @layer base {
   html {
-    /* use a CSS variable that we update from JS to match the real navbar height */
-    --nav-height: 120px;
+    scroll-behavior: smooth;
+  }
 
-    scroll-padding-top: var(--nav-height);
-  }
-  
-  /* Best-practice: apply scroll-margin-top to anchor targets (headings)
-     so fragment navigation positions them correctly below a fixed navbar. */
-  [id] {
-    /* Align heading exactly at the bottom edge of navbar (no extra gap) */
-    scroll-margin-top: 0;
-  }
-  
   body {
     font-family: Inter, system-ui, sans-serif;
   }
@@ -28,7 +18,7 @@
   .animate-fade-in-up {
     animation: fade-in-up 1s ease-out;
   }
-  
+
   @keyframes fade-in-up {
     from {
       opacity: 0;
@@ -42,13 +32,14 @@
   }
 
   /* Reduce hero height on very wide (landscape) small screens to avoid cramped layout */
-  @media (width <= 640px) and (orientation: landscape) {
+  @media (width <=640px) and (orientation: landscape) {
     .hero-compact {
       min-height: 60vh;
     }
 
     .hero-compact h1 {
-      font-size: 3.2rem; /* smaller heading */
+      font-size: 3.2rem;
+      /* smaller heading */
     }
   }
 }

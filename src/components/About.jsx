@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <section className="py-16 sm:py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="py-16 sm:py-20 bg-white dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 id="about" className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Sobre Mí</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">Sobre Mí</h2>
           <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Soy Julián González, desarrollador web fullstack y estudiante avanzado de la Tecnicatura Universitaria en Programación en UTN (ingreso 2024). Mi objetivo es construir aplicaciones web modernas, eficientes y escalables, aplicando siempre las mejores prácticas del sector.
           </p>

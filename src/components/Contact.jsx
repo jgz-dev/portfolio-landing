@@ -46,7 +46,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="py-20 sm:py-32 bg-white dark:bg-black relative overflow-hidden transition-colors duration-300">
+    <section id="contact" className="py-20 sm:py-32 bg-white dark:bg-black relative overflow-hidden transition-colors duration-300">
       {/* Background effects */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -54,7 +54,7 @@ export default function Contact() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center mb-12 sm:mb-20">
-          <span id="contact" className="inline-block px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-violet-600 dark:text-violet-300 text-sm font-medium backdrop-blur-sm">
+          <span className="inline-block px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 rounded-full text-violet-600 dark:text-violet-300 text-sm font-medium backdrop-blur-sm">
             Contacto
           </span>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6">
