@@ -1,10 +1,11 @@
 import { useForm, ValidationError } from '@formspree/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IoMailOutline, IoLogoLinkedin, IoLogoGithub, IoPaperPlane } from 'react-icons/io5'
 import { IoCheckmarkCircle } from 'react-icons/io5'
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("myznvnkk");
+  const [showSuccess, setShowSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,6 +13,24 @@ export default function Contact() {
     budget: 'A discutir',
     message: ''
   });
+
+  // Cuando el formulario se envía exitosamente, mostrar success y auto-reiniciar después de 5 segundos
+  useEffect(() => {
+    if (state.succeeded) {
+      setShowSuccess(true);
+      const timer = setTimeout(() => {
+        setShowSuccess(false);
+        setFormData({
+          name: '',
+          email: '',
+          projectType: 'Desarrollo Web Full Stack',
+          budget: 'A discutir',
+          message: ''
+        });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [state.succeeded]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,24 +40,21 @@ export default function Contact() {
     }));
   };
 
-  if (state.succeeded) {
+  if (showSuccess) {
     return (
       <section className="py-32 bg-white dark:bg-black relative overflow-hidden transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center">
-            <IoCheckmarkCircle className="mx-auto mb-6 text-green-500" size={64} />
+            <IoCheckmarkCircle className="mx-auto mb-6 text-green-500 animate-bounce" size={64} />
             <h2 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-white mb-6">
               <span className="bg-gradient-to-r from-violet-600 dark:from-violet-400 to-cyan-600 dark:to-cyan-400 bg-clip-text text-transparent">¡Gracias por tu mensaje!</span>
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8">
               He recibido tu correo y te responderé en menos de 24 horas.
             </p>
-            <a
-              href="#"
-              className="inline-block bg-gradient-to-r from-violet-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold hover:from-violet-500 hover:to-purple-500 transition-all duration-300 hover:scale-105"
-            >
-              Volver al inicio
-            </a>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+              El formulario se reiniciará automáticamente en unos segundos...
+            </p>
           </div>
         </div>
       </section>
